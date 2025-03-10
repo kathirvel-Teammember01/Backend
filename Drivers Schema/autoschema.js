@@ -20,6 +20,6 @@ const driverSchema = new mongoose.Schema({
 });
 
 // Prevent overwriting the model
-const Driver = mongoose.models.Driver || mongoose.model('Driver', driverSchema);
+const Driver = mongoose.models.Driver || mongoose.model(' Auto Driver', driverSchema);
 
 module.exports = Driver;

@@ -17,5 +17,5 @@ const DriverSchema = new mongoose.Schema({
   vehicleInsurancePhoto: { type: Buffer }
 });
 
-const Driver = mongoose.model('Driver', DriverSchema);
+const Driver = mongoose.model(' Four Wheeler Driver', DriverSchema);
 module.exports = Driver;

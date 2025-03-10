@@ -11,15 +11,13 @@ const driverSchema = new mongoose.Schema({
   licenseExpiryDate: String,
   age: Number,
   email: String,
-  preferredLocation: String,
   emergencyContact: String,
-  languagesSpoken: String,
   driverPhoto: String,
   licensePhoto: String,
   vehicleInsurancePhoto: String,
 });
 
 // Prevent overwriting the model
-const Driver = mongoose.models.Driver || mongoose.model('Driver', driverSchema);
 
-module.exports = Driver;
+
+module.exports =  mongoose.model('Two Wheeler Driver', driverSchema);;

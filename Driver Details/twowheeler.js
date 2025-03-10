@@ -54,7 +54,8 @@ router.post('/upload', upload.fields([
       email,
       driverPhoto: req.files['driverPhoto'] ? req.files['driverPhoto'][0].buffer : null,
       licensePhoto: req.files['licensePhoto'] ? req.files['licensePhoto'][0].buffer : null,
-      vehicleInsurancePhoto: req.files['vehicleInsurancePhoto'] ? req.files['vehicleInsurancePhoto'][0].buffer : null
+      vehicleInsurancePhoto: req.files['vehicleInsurancePhoto'] ? req.files['vehicleInsurancePhoto'][0].buffer : null,
+      emergencyContact,
     });
 
     await newDriver.save();
