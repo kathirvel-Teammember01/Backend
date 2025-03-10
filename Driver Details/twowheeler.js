@@ -29,7 +29,7 @@ router.post('/upload', upload.fields([
       address, vehicleNumber, licenseExpiryDate, age, email } = req.body;
 
     if (!driverName || !mobileNumber || !licenseNumber || !age || !email) {
-      return res.status(400).json({ message: "Missing required fields" });
+      return res.status(400).json({ message: "Missing    required fields" });
     }
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
