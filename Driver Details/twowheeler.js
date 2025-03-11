@@ -32,7 +32,7 @@ router.post('/upload', upload.fields([
     }
 
     const newDriver = new Driver({
-      username,
+      
       driverName,
       mobileNumber,
       licenseNumber,
