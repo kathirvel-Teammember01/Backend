@@ -18,18 +18,14 @@ router.post('/upload', upload.fields([
   { name: 'vehicleInsurancePhoto' }
 ]), async (req, res) => {
   try {
-    const { username, driverName, mobileNumber, licenseNumber, bikeModel, insuranceExpiryDate,
+    const {driverName, mobileNumber, licenseNumber, bikeModel, insuranceExpiryDate,
       address, vehicleNumber, licenseExpiryDate, age, email, emergencyContact } = req.body;
 
-    if (!username || !driverName || !mobileNumber || !licenseNumber || !age || !email || !emergencyContact) {
+    if ( !driverName || !mobileNumber || !licenseNumber || !age || !email || !emergencyContact) {
       return res.status(400).json({ message: "Missing required fields" });
     }
 
-    // Check if username already exists
-    const existingUser = await Driver.findOne({ username });
-    if (existingUser) {
-      return res.status(400).json({ message: "❌ Username already exists. Please choose a different one." });
-    }
+    
 
     const newDriver = new Driver({
       
